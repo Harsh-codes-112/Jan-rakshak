@@ -1,0 +1,6 @@
+node_modules/
+.next/
+next-env.d.ts
+.netlify/*
+!.netlify/results.md
+*.tsbuildinfo
