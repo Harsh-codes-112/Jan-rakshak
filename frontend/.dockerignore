@@ -1,0 +1,8 @@
+node_modules
+.next
+__pycache__
+.env
+.git
+.gitignore
+npm-debug.log*
+.DS_Store

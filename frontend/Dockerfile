@@ -1,8 +1,17 @@
-FROM node:18-alpine
+FROM node:18-alpine AS base
 WORKDIR /app
-COPY package.json ./
+
+COPY package.json package-lock.json* ./
 RUN npm install
+
 COPY . .
+
 RUN npm run build
+
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+
 EXPOSE 3000
-CMD ["npm", "start"]
+
+CMD ["npm", "run", "start", "--", "--hostname", "0.0.0.0", "--port", "3000"]
