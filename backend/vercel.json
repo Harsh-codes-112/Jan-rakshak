@@ -1,0 +1,7 @@
+# FastAPI app deployed as a Vercel Python Function from the backend project root.
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
